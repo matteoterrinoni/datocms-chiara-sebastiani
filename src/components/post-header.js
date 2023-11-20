@@ -3,11 +3,13 @@ import Avatar from "../components/avatar";
 import Date from "../components/date";
 import CoverImage from "../components/cover-image";
 import PostTitle from "../components/post-title";
+import { Link } from "gatsby";
+import { Logo } from "../components/logo/logo";
 
 export default function PostHeader({ title, coverImage, date, author }) {
   return (
     <>
-      <PostTitle>{title}</PostTitle>
+      <PostTitle><Link to="/" className="hover:underline"><Logo/></Link>{title}</PostTitle>
       <div className="hidden md:block md:mb-12">
         <Avatar name={author?.name} picture={author?.picture} />
       </div>

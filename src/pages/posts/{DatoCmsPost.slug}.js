@@ -12,7 +12,6 @@ export default function Post({ data: { site, post, morePosts } }) {
   return (
     <Container>
       <HelmetDatoCms seo={post.seo} favicon={site.favicon} />
-      <Header />
       <article>
         <PostHeader
           title={post.title}

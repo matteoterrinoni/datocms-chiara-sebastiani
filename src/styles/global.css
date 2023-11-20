@@ -1,3 +1,98 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.logo img{
+    max-width: 300px;
+}
+
+.logo-text-top{
+    color: #000000;
+    font-size: xx-large;
+}
+
+.logo-text-bottom{
+    color: #000000;
+    font-size: large;
+    font-weight: 100;
+    position: relative;
+}
+
+.logo-text-bottom::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    bottom: -4px;
+    left: -10px;
+    right: -10px;
+    background-color: #def2f3;
+    z-index: -1;
+    transform: rotate(-1deg);
+}
+
+.intro .logo{
+    display: flex;
+    align-items: center;
+}
+
+.intro .logo img{
+    margin-right: 30px;
+    max-width: 200px;
+}
+
+.intro .logo-text-top{
+    font-size: 380%;
+}
+.intro .logo-text-bottom{
+    font-size: 268%;
+}
+
+.intro{
+    display: flex;
+    justify-content: center !important;
+}
+
+@media (max-width: 1024px){
+    .intro .logo img{
+        margin-right: 0px;
+    }
+    .intro .logo{
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro .logo-text-top {
+        font-size: 30pt;
+    }
+
+    .intro .logo-text-bottom {
+        font-size: 21pt;
+    }
+}
+
+@media (max-width: 500px){
+    .intro .logo img{
+        max-width: 100px;
+    }
+    .intro .logo-text-top {
+        font-size: 20pt;
+    }
+
+    .intro .logo-text-bottom {
+        font-size: 13pt;
+    }
+}
+
+.post-title .logo img{
+    max-width: 150px;
+}
+
+.post-title .logo{
+    margin-right: 30px;
+}
+
+.post-title{
+    display: flex;
+    align-items: center;
+}
